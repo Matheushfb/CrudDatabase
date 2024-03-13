@@ -82,6 +82,7 @@ class Database:
         print(type(databases))
         conn.close()
         return databases
+        
     def getdatabase(self, conn: str, db_name: str) -> str:
         cursor = conn.cursor()
         cursor.execute(f"SELECT name FROM sys.databases WHERE name = '{db_name}'")
